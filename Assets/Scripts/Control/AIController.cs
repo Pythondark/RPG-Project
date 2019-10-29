@@ -12,6 +12,7 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 2.5f;
+        [SerializeField] float waypointDwellTime = 3f;
         [SerializeField] bool chaseDistanceGizmo = true;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
@@ -24,6 +25,7 @@ namespace RPG.Control
         Vector3 guardPosition;
         Vector3 lastKnownPlayerPosition;
         float timeSinceLastSawPlayer = Mathf.Infinity;
+        float timeSinceArrivedAtWaypoint = Mathf.Infinity;
 
         int currentWaypointIndex = 0;
 
@@ -46,7 +48,6 @@ namespace RPG.Control
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
                 // Attack state
-                timeSinceLastSawPlayer = 0f;
                 AttackBehaviour();
             }
             else if (timeSinceLastSawPlayer < suspicionTime)
@@ -59,12 +60,14 @@ namespace RPG.Control
                 // Back to Guard position
                 PatrolBehaviour();
             }
-            timeSinceLastSawPlayer += Time.deltaTime;
+
+            UpdateTimers();
         }
 
 
         private void AttackBehaviour()
         {
+            timeSinceLastSawPlayer = 0f;
             fighter.Attack(player);
             lastKnownPlayerPosition = player.transform.position;
         }
@@ -83,12 +86,17 @@ namespace RPG.Control
             {
                 if (AtWaypoint())
                 {
+                    timeSinceArrivedAtWaypoint = 0;
                     CycleWaypoint();
                 }
                 nextPosition = GetCurrentWaypoint();
                 
             }
-            mover.StartMoveAction(nextPosition);
+            if (timeSinceArrivedAtWaypoint > waypointDwellTime)
+            {
+                mover.StartMoveAction(nextPosition);
+            }
+            
         }
     
         private bool AtWaypoint()
@@ -115,6 +123,12 @@ namespace RPG.Control
             return Vector3.Distance(transform.position, player.transform.position) < chaseDistance;
         }
 
+
+        private void UpdateTimers()
+        {
+            timeSinceLastSawPlayer += Time.deltaTime;
+            timeSinceArrivedAtWaypoint += Time.deltaTime;
+        }
 
         // Called by Unity
         private void OnDrawGizmosSelected()       

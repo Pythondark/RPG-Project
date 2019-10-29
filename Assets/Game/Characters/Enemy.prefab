@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 5
+  chaseDistanceGizmo: 1
 --- !u!114 &6172257176479290608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,21 +90,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6657982365146137015, guid: ccb8894b326c2414fb4979d59d18730a,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.30350518
-      objectReference: {fileID: 0}
-    - target: {fileID: 6657982365146137015, guid: ccb8894b326c2414fb4979d59d18730a,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5542298562859034960, guid: ccb8894b326c2414fb4979d59d18730a,
-        type: 3}
-      propertyPath: healthPoints
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7731862301341952059, guid: ccb8894b326c2414fb4979d59d18730a,
         type: 3}
       propertyPath: m_Name
@@ -173,6 +159,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657982365146137015, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.30350518
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657982365146137015, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542298562859034960, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: healthPoints
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2324930826773063484, guid: ccb8894b326c2414fb4979d59d18730a,
         type: 3}

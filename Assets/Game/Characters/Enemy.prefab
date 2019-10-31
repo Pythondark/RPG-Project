@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 5
+  suspicionTime: 2.5
+  waypointDwellTime: 3
   chaseDistanceGizmo: 1
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
 --- !u!114 &6172257176479290608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,7 +47,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417656, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 417656, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
       propertyPath: m_LocalPosition.z

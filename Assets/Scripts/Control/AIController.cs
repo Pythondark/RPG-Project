@@ -11,8 +11,12 @@ namespace RPG.Control
     public class AIController : MonoBehaviour
     {
         [SerializeField] float chaseDistance = 5f;
+        [SerializeField] [Range(0, 1)] float chaseSpeedFraction = 0.7f;
+        [SerializeField] [Range(0, 1)] float patrolSpeedFraction = 0.2f;
         [SerializeField] float suspicionTime = 2.5f;
         [SerializeField] float waypointDwellTime = 3f;
+        
+
         [SerializeField] bool chaseDistanceGizmo = true;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
@@ -74,7 +78,7 @@ namespace RPG.Control
 
         private void SuspicionBehaviour()
         {
-            mover.StartMoveAction(lastKnownPlayerPosition);
+            mover.StartMoveAction(lastKnownPlayerPosition, chaseSpeedFraction);
         }
 
         // === PATROL BEHAVIOUR ===
@@ -94,7 +98,7 @@ namespace RPG.Control
             }
             if (timeSinceArrivedAtWaypoint > waypointDwellTime)
             {
-                mover.StartMoveAction(nextPosition);
+                mover.StartMoveAction(nextPosition, patrolSpeedFraction);
             }
             
         }

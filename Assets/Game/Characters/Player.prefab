@@ -84,6 +84,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5542298562859034960, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: healthPoints
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752244907974258143, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7387641825189350128, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 5.66
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb8894b326c2414fb4979d59d18730a, type: 3}
 --- !u!1 &4443997784258499211 stripped

@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using RPG.Saving;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
 namespace RPG.Cinematics
 {
-    public class CinematicTrigger : MonoBehaviour
+    public class CinematicTrigger : MonoBehaviour, ISaveable
     {
 
         bool alreadyTriggered = false;
+
 
         private void OnTriggerEnter(Collider otherCollider)
         {
@@ -18,6 +20,17 @@ namespace RPG.Cinematics
                 alreadyTriggered = true;
             }
             
+        }
+
+        // === SAVING ===
+        object ISaveable.CaptureState()
+        {
+            return alreadyTriggered;
+        }
+
+        void ISaveable.RestoreState(object state)
+        {
+            alreadyTriggered = (bool)state;
         }
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 
-
 namespace RPG.SceneManagement
 {
     public class Portal : MonoBehaviour
@@ -48,12 +47,23 @@ namespace RPG.SceneManagement
             // Fade out
             yield return StartCoroutine(fader.FadeOut(fadeOutTime));
 
-            // Load new Scene            
-            yield return SceneManager.LoadSceneAsync(sceneToLoad);       
+            // Save current 
+            SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
+            wrapper.Save();
+
+            // Load new Scene          
+            yield return SceneManager.LoadSceneAsync(sceneToLoad);
+
+            // Load current level
+            wrapper.Load();
+
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
+
+            wrapper.Save();
             
             // Wait for a few seconds
+            // load?
             yield return new WaitForSeconds(fadeWaitTime);
 
             // Fade In

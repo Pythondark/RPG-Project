@@ -11040,7 +11040,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612125011}
-  m_LocalRotation: {x: 0.08760086, y: 0.89068496, z: -0.19430268, w: 0.401563}
+  m_LocalRotation: {x: 0.08760085, y: 0.89068496, z: -0.19430265, w: 0.40156302}
   m_LocalPosition: {x: -14.66, y: 4.44, z: 18.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12080,6 +12080,76 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.77896017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.23601715
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.13379432
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5653459
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.077
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.181
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.428
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.74343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.74343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.74343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -54.846004
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -124.36101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675198387845854133, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 115.66401
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213417601515958742, guid: 7602baf2575fd754ea1ca8d410f04b1c,
+        type: 3}
+      propertyPath: m_Name
+      value: Equipped Pickaxe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7602baf2575fd754ea1ca8d410f04b1c, type: 3}

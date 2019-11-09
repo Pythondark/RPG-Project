@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Combat;
+using RPG.Mining;
 using System;
 using RPG.Core;
 
@@ -23,6 +24,7 @@ namespace RPG.Control
             if (health.IsDead()) return;
 
             if (InteractWithCombat()) return;
+            if (InteractWithMining()) return;
             if (InteractWithMovement()) return;
         }
 
@@ -47,6 +49,23 @@ namespace RPG.Control
             }
             return false;
         }
+
+        private bool InteractWithMining()
+        {
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            foreach (RaycastHit hit in hits)
+            {
+                MiningTarget miningTarget = hit.transform.GetComponent<MiningTarget>();
+                if (miningTarget == null) continue;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    GetComponent<Miner>().Mine(miningTarget.gameObject);
+                }    
+                return true;
+            }        
+            return false;
+        }
+
 
         private bool InteractWithMovement()
         {        

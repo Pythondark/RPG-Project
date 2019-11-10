@@ -38,7 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f949b57d8f37a6d41992ecee991a7864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickAxeRange: 2
+  pickAxeRange: 2.5
   timeBetweenSwings: 1
   pickDamage: 5
   pickaxeAngleOffset: 75

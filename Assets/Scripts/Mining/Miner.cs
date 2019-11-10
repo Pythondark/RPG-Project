@@ -55,6 +55,7 @@ namespace RPG.Mining
 
             if (timeSinceLastSwing >= timeBetweenSwings)
             {
+                // This will trigger the PickaxeHit() function through the animation event.
                 TriggerPickaxeSwing();
                 timeSinceLastSwing = 0f;
             }
@@ -75,10 +76,21 @@ namespace RPG.Mining
 
         public void Mine(GameObject miningTarget)
         {
-            print("Mine: " + miningTarget);
+            //print("Mine: " + miningTarget);
             GetComponent<ActionScheduler>().StartAction(this);
             target = miningTarget.GetComponent<MiningTarget>();
 
+        }
+
+        // Animation Event
+        public void PickaxeHit()
+        {
+            if (target == null) { return; }
+            // returns true if ore was destroyed.
+            if (target.OreTakesDamage(pickDamage))
+            {
+                Cancel();
+            }
         }
 
 

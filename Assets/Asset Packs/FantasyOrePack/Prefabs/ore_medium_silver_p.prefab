@@ -4758,7 +4758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef95f2709c459f543bf9aa2ca11becea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHealth: 100
+  targetHealth: 20
+  oreRespawnTime: 5
   oreIdentity: 0
 --- !u!135 &5970424620288940893
 SphereCollider:

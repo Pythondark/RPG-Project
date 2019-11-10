@@ -6,7 +6,7 @@ namespace RPG.Mining
 {    
     public class MiningTarget : MonoBehaviour
     {
-        [SerializeField] int targetHealth = 100;
+        [SerializeField] float targetHealth = 20;
         [SerializeField] float oreRespawnTime = 5f;
         [SerializeField] OreIdentifier oreIdentity = OreIdentifier.Silver;
 
@@ -22,6 +22,18 @@ namespace RPG.Mining
         {
             return oreAvailable;
         }
+
+        public bool OreTakesDamage(float damage)
+        {
+            targetHealth -= damage;
+            if (targetHealth <= 0)
+            {
+                Destroy(gameObject);
+                return true;
+            }
+            return false;
+        }
+
     }
 }
 

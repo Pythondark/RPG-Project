@@ -89,6 +89,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!4 &2851675425928567398 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 2851675425928162664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8696913243812673486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -166,6 +172,33 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000012
       objectReference: {fileID: 0}
+    - target: {fileID: 8752244907974258143, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: weaponDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752244907974258143, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 04951268579471b4ab0ba14a007e5808,
+        type: 2}
+    - target: {fileID: 8752244907974258143, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 2851675425928567398}
+    - target: {fileID: 8752244907974258143, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 04951268579471b4ab0ba14a007e5808,
+        type: 2}
+    - target: {fileID: 7387641825189350128, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6657982365146137015, guid: ccb8894b326c2414fb4979d59d18730a,
         type: 3}
       propertyPath: m_Radius
@@ -180,16 +213,6 @@ PrefabInstance:
         type: 3}
       propertyPath: healthPoints
       value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8752244907974258143, guid: ccb8894b326c2414fb4979d59d18730a,
-        type: 3}
-      propertyPath: weaponDamage
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7387641825189350128, guid: ccb8894b326c2414fb4979d59d18730a,
-        type: 3}
-      propertyPath: maxSpeed
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2324930826773063484, guid: ccb8894b326c2414fb4979d59d18730a,
         type: 3}

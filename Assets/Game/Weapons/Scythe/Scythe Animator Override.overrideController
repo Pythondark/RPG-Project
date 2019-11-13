@@ -6,10 +6,8 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pickaxe Override Controller
+  m_Name: Scythe Animator Override
   m_Controller: {fileID: 9100000, guid: f322bb82c43f81d4e905066d24678765, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: bfb645daeb3c39748943bf47a79a671f, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: bfb645daeb3c39748943bf47a79a671f, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 1315bcd7509173f44bc6655b2673dd4d, type: 3}
-    m_OverrideClip: {fileID: 7400002, guid: f684ff02cda4fb7489710fd1dad12473, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 04cb27dc01c081446ba2c02f2761f01d, type: 3}

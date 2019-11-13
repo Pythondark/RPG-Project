@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using System;
+using RPG.Combat;
 
 namespace RPG.Mining
 {
@@ -19,13 +20,14 @@ namespace RPG.Mining
 
 
         MiningTarget target;
+        Fighter fighter;
 
 
 
         // Start is called before the first frame update
         void Start()
         {
-
+            fighter = GetComponent<Fighter>();
         }
 
         // Update is called once per frame
@@ -34,6 +36,8 @@ namespace RPG.Mining
             timeSinceLastSwing += Time.deltaTime;
 
             if (target == null) return;
+            if (fighter.GetCurrentWeapon() == null) { return; }
+            if (fighter.GetCurrentWeapon().IsPickaxe() == false) { return; }
 
             if (!GetIsInRange())
             {

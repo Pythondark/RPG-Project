@@ -9,7 +9,8 @@ namespace RPG.Combat
     public class Fighter : MonoBehaviour, IAction
     {
         [SerializeField] float timeBetweenAttacks = 1f;
-        [SerializeField] Transform handTransform = null;
+        [SerializeField] Transform rightHandTransform = null;
+        [SerializeField] Transform leftHandTransform = null;
         [SerializeField] Weapon defaultWeapon = null;
 
         Health target;
@@ -46,7 +47,7 @@ namespace RPG.Combat
         {
             currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
-            currentWeapon.Spawn(handTransform, animator);          
+            currentWeapon.Spawn(rightHandTransform, leftHandTransform, animator);          
         }
 
         public bool CanAttack(GameObject combatTarget)
@@ -95,6 +96,10 @@ namespace RPG.Combat
             return Vector3.Distance(transform.position, target.transform.position) < currentWeapon.GetRange();
         }
 
+        public Weapon GetCurrentWeapon()
+        {
+            return currentWeapon;
+        }
 
 
         public void Cancel()

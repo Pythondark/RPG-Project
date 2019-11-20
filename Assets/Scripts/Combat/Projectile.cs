@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     
     [SerializeField] float speed = 10f;
     Health target = null;
+    float damage = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +26,10 @@ public class Projectile : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
-    public void SetTarget(Health target)
+    public void SetTarget(Health target, float damage)
     {
         this.target = target;
+        this.damage = damage;
     }
 
     private Vector3 GetAimLocation()
@@ -38,5 +40,14 @@ public class Projectile : MonoBehaviour
             return target.transform.position;
         }
         return target.transform.position + Vector3.up * targetCapsule.height/2;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Health targetHealth = other.GetComponent<Health>();
+        if (targetHealth == null) { return; }
+        if (targetHealth != target) { return; }
+        target.TakeDamage(damage);
+        Destroy(gameObject);
     }
 }

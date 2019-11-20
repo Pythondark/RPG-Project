@@ -17,5 +17,6 @@ MonoBehaviour:
     type: 3}
   weaponRange: 2
   weaponDamage: 5
-  isRightHanded: 0
+  isRightHanded: 1
   isPickaxe: 1
+  projectile: {fileID: 0}

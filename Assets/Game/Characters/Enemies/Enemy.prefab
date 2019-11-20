@@ -225,6 +225,11 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6657982365146137015, guid: ccb8894b326c2414fb4979d59d18730a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5542298562859034960, guid: ccb8894b326c2414fb4979d59d18730a,
         type: 3}
       propertyPath: healthPoints
